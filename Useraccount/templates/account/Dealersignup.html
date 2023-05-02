@@ -1,0 +1,126 @@
+{% load static %}
+{%load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="container-fluid" style="background-color:#cadffc;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="main col-xl-10" style="height: 80%;">
+                    <div class="card" style="border-radius: 1rem; ">
+                        <div class="row g-0 ">
+                            <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                <img src="/static/assets/images/slider/slide-bg/26.jpg" alt="login form"
+                                    class="img-fluid" style="border-radius: 1rem 0 0 1rem;height: 99.9%;width: 110%;">
+                            </div>
+                            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                <div class="card-body p-4 p-lg-5 text-black">
+
+                                    <form action="" method="post">
+                                        {% csrf_token %}
+
+
+                                        <div class="align-items-center mb-3 pb-1" style="text-align:center;">
+                                            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                            <span class="h1 fw-bold mb-0">
+                                                <img src="{% static 'assets/images/logo/Best Dels.png' %}" height="70px"
+                                                    width="70px" alt="logo" style="text-align:center;">
+                                            </span>
+                                        </div>
+
+                                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; text-align:center;">
+                                            <b>Signup
+                                            </b>
+                                        </h3>
+
+                                        <div class="form-outline mb-4">
+
+
+                                            <div id="div_id_email" class="mb-3"> <label for="id_email"
+                                                    class="form-label requiredField">
+                                                    Email address<span class="asteriskField">*</span> </label> <input
+                                                    type="email" name="email" maxlength="254"
+                                                    class="emailinput form-control" required id="id_email">
+                                            </div>
+
+                                            <div id="div_id_fullname" class="mb-3"> <label for="id_fullname"
+                                                class="form-label requiredField">
+                                                Fullname<span class="asteriskField">*</span> </label> <input
+                                                type="text" name="fullname" maxlength="100"
+                                                class="textinput form-control" required id="id_fullname"> </div>
+
+                                            <div id="div_id_username" class="mb-3"> <label for="id_username"
+                                                    class="form-label requiredField">
+                                                    Username<span class="asteriskField">*</span> </label> <input
+                                                    type="text" name="username" maxlength="150" autofocus=""
+                                                    class="textinput form-control" required="" id="id_username"></div>
+
+                                            <div id="div_id_password1" class="mb-3"> <label for="id_password1"
+                                                    class="form-label requiredField">
+                                                    Password<span class="asteriskField">*</span> </label> <input
+                                                    type="password" name="password1" autocomplete="new-password"
+                                                    class="passwordinput form-control" required id="id_password1"></div>
+
+                                            <div id="div_id_password2" class="mb-3"> <label for="id_password2"
+                                                    class="form-label requiredField">Password confirmation<span
+                                                        class="asteriskField">*</span> </label> <input type="password"
+                                                    name="password2" autocomplete="new-password"
+                                                    class="passwordinput form-control" required id="id_password2">
+                                            </div>
+
+                                            <div class="pt-1 mb-4">
+                                                <button type="submit">Register</button>
+                                            </div>
+
+                                            <a class="small text-muted" href="#!">Forgot password?</a>
+                                            <p class="mb-5 pb-lg-2" style="color: #393f81;">Already have an
+                                                account? <a href="{% url 'dealerLogin' %}" style="color: #393f81;">Login
+                                                    here</a></p>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<style>
+    button {
+        background-color: #cadffc;
+        color: black;
+        padding: 1px 0;
+        width: 100%;
+        border: none;
+        margin-top: 10px;
+        font-size: 25px;
+        border-radius: 3px 3px;
+    }
+
+    .card {
+        height: 90%;
+    }
+
+    .main {
+        height: 80%;
+    }
+</style>

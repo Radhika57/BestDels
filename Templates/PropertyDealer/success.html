@@ -1,0 +1,115 @@
+
+{% load static %}
+{%load crispy_forms_tags %}
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Success</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'assets1/images/favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'assets1/css/style.css' %}">
+
+        <!-- jquery.vectormap css -->
+        <link href="{% static 'assets1/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- DataTables -->
+        <link href="{% static 'assets1/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'assets1/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'assets1/libs/datatables.net-select-bs4/css//select.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="{% static 'assets1/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />  
+
+        <!-- Bootstrap Css -->
+        <link href="{% static 'assets1/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{% static 'assets1/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static 'assets1/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+        <style>
+            .link_page{
+              margin-bottom: 25px;
+            }
+          .link_page a {
+              color: black;
+            }
+          </style>
+    </head>
+
+    <body data-topbar="dark">
+        <div id="layout-wrapper">
+
+            
+            {% include 'dashboard/headers.html' %}
+            <div class="page-content">
+              <div class="link_page">
+                <a href="{% url 'dashboard' %}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                  </svg> Dashboard</a> /
+                <a href="{% url 'PROPERTY' %}">Property</a> /
+                <a href="{% url 'ADDPROPERTY' %}">New Property</a>
+              </div>
+<div class="text-center mt-5 pt-5">
+{% comment %} <img src="{% static 'assets/img/img.png'  %}" alt="" class="img-fluid img-responsive" style="width: 200px;height: 200px;"> {% endcomment %}
+<h2 class="alert  bg-success mt-5">Thank you! Your payment has been received. We will notify you will all the details on your registered mobile number: {{user.mobile_no}}</h2>
+{% comment %} <a href="{% url 'PROPERTY' %}" class="btn btn-info">Go to your Dashboard</a> {% endcomment %}
+</div>
+{% include 'dashboard/footers.html' %}
+</div></div>
+</div>
+
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'assets1/libs/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/metismenu/metisMenu.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/simplebar/simplebar.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/node-waves/waves.min.js' %}"></script>
+
+        
+        <!-- apexcharts -->
+        <script src="{% static 'assets1/libs/apexcharts/apexcharts.min.js' %}"></script>
+
+        <!-- jquery.vectormap map -->
+        <script src="{% static 'assets1/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js' %}"></script>
+
+        <!-- Required datatable js -->
+        <script src="{% static 'assets1/libs/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+        
+        <!-- Buttons examples -->
+        <script src="{% static 'assets1/libs/datatables.net-buttons/js/dataTables.buttons.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/jszip/jszip.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/pdfmake/build/pdfmake.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/pdfmake/build/vfs_fonts.js' %}"></script>
+        <script src="{% static 'assets1/libs/datatables.net-buttons/js/buttons.html5.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/datatables.net-buttons/js/buttons.print.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/datatables.net-buttons/js/buttons.colVis.min.js' %}"></script>
+
+        <script src="{% static 'assets1/libs/datatables.net-keytable/js/dataTables.keyTable.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/datatables.net-select/js/dataTables.select.min.js' %}"></script>
+
+        <!-- Responsive examples -->
+        <script src="{% static 'assets1/libs/datatables.net-responsive/js/dataTables.responsive.min.js' %}"></script>
+        <script src="{% static 'assets1/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js' %}"></script>
+
+        <script src="{% static 'assets1/js/pages/dashboard.init.js' %}"></script>
+
+        <!-- Datatable init js -->
+        <script src="{% static 'assets1/js/pages/datatables.init.js' %}"></script>
+
+        <!-- App js -->
+        <script src="{% static 'assets1/js/app.js' %}"></script>
+    </body>
+
+</html>

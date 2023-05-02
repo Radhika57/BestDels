@@ -1,0 +1,96 @@
+{% load static %}
+
+<!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer footer-1 bg-white">
+    <!-- Widget Section
+============================================= -->
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 widget--about">
+                    <div class="widget--content">
+                        <div class="footer--logo">
+                            <img src="{% static 'assets/images/logo/Best Dels.png' %}" height="100px" width="100px" alt="logo">
+                        </div>
+                        <p>Office No:325 Tower B Bhutani Alphatum Sector 90 Noida</p>
+                        <div class="footer--contact">
+                            <ul class="list-unstyled mb-0">
+                                <li>9886678900</li>
+                                <li><a href="mailto:xploitxperts@gmail.com">xploitxperts@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-md-2 end -->
+                <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 widget--links">
+                    <div class="widget--title">
+                        <h5>Company</h5>
+                    </div>
+                    <div class="widget--content">
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="{% url 'pageAbout' %}">About us</a></li>
+                            <li><a href="{% url 'propertieslist' %}">Properties</a></li>
+                            <li><a href="{% url 'pageContact' %}">Contact</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!-- .col-md-2 end -->
+                <div class="col-xs-12 col-sm-3 col-md-2 widget--links">
+                    <div class="widget--title">
+                        <h5>Learn More</h5>
+                    </div>
+                    <div class="widget--content">
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                            <li><a href="{% url 'termsconditions' %}">Terms & Conditions</a></li>
+                            <li><a href="{% url 'pageFaq' %}">FAQ</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!-- .col-md-2 end -->
+               <div class="col-xs-12 col-sm-12 col-md-4 widget--newsletter">
+                    {% comment %} <div class="widget--title">
+                        <h5>newsletter</h5>
+                    </div> {% endcomment %}
+                    <div class="widget--content">
+                        {% comment %} <form class="newsletter--form mb-40">
+                            <input type="email" class="form-control" id="newsletter-email"
+                                placeholder="Email Address">
+                            <button type="submit"><i class="fa fa-arrow-right"></i></button>
+                        </form> {% endcomment %}
+                        <h6>Get In Touch</h6>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                        </div>
+                    </div>
+                </div> 
+                <!-- .col-md-4 end -->
+
+            </div>
+        </div>
+        <!-- .container end -->
+    </div>
+    <!-- .footer-widget end -->
+
+    <!-- Copyrights
+============================================= -->
+    <div class="footer--copyright text-center">
+        <div class="container">
+            <div class="row footer--bar">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <span>© 2018 <a href="http://themeforest.net/user/zytheme">Zytheme</a>, All Rights
+                        Reserved.</span>
+                </div>
+
+            </div>
+            <!-- .row end -->
+        </div>
+        <!-- .container end -->
+    </div>
+    <!-- .footer-copyright end -->
+</footer>

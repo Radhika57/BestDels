@@ -1,0 +1,10 @@
+.form-group {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+.my_btn{
+    background-color: green;
+    margin-top: 10px;
+}

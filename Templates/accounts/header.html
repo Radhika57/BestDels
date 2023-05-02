@@ -1,0 +1,66 @@
+{% load static %}
+<header id="navbar-spy" class="header header-1 header-transparent header-fixed" >
+    <nav id="primary-menu" class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="index.html">
+                    <img class="logo-light" src="{% static 'assets/images/logo/Best Dels.png' %}" height="100px" width="100px" alt="Land Logo">
+                    <img class="logo-dark" src="{% static 'assets/images/logo/Best Dels.png' %}" height="100px" width="100px" alt="Land Logo">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+                <ul class="nav navbar-nav nav-pos-center navbar-left">
+                    <!-- Home Menu -->
+                    <li><a href="{% url 'maincontent' %}">Home</a></li>
+                    
+                    <!-- li end -->
+
+                    <!-- Pages Menu-->
+                    <li class="has-dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Projects</a>
+                        <ul class="dropdown-menu">
+                            {% comment %} <li><a href="page-about.html">Project Details</a></li> {% endcomment %}
+                            <li><a href="{% url 'projectlist' %}">Project List</a></li>
+                        </ul>
+                    </li>
+                    <!-- li end -->
+
+                    <!-- Profile Menu-->
+                    <li class="has-dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Properties</a>
+                        <ul class="dropdown-menu">
+                            {% comment %} <li><a href="page-about.html">Properties Details</a></li> {% endcomment %}
+                            <li><a href="{% url 'propertieslist' %}">Properties List</a></li>
+                        </ul>
+                    </li>
+                    <!-- li end -->
+
+                    <!-- Properties Menu-->
+                    
+                    <!-- li end -->
+
+                    <li><a href="{% url 'pageContact' %}">contact</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+                
+                <div class="module module-property pull-left">
+                    <a href={% url 'dealerLogin' %} target="_blank" class="btn"><i class="fa fa-plus"></i> add
+                        property</a>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+</header>

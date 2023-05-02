@@ -1,0 +1,162 @@
+{% extends 'dashboard/dashboardhome.html' %}
+{% load static %}
+{%load crispy_forms_tags %}
+{% block main-content %}
+
+<style>
+    .link_page{
+      margin-bottom: 25px;
+    }
+  .link_page a {
+      color: black;
+    }
+  </style>
+  
+  <div class="page-content">
+    <div class="link_page">
+      <a href="{% url 'dashboard' %}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor"
+          class="bi bi-house-door-fill" viewBox="0 0 16 16">
+          <path
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+        </svg> Dashboard</a> /
+      <a href="{% url 'projects' %}">Project</a>
+    </div>
+    <div class="container-fluid">
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                {{ form.Name|as_crispy_field }}
+              </div>
+              <div class="form-group">
+                {{ form.description|as_crispy_field }}
+              </div>
+                <div class="form-group">
+                    {{ form.content|as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ form.image|as_crispy_field }}
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.country|as_crispy_field }}
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.state|as_crispy_field }}
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.city|as_crispy_field }}
+                          </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form.project_location|as_crispy_field }}
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form.Latitude|as_crispy_field }}
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form.Longitude|as_crispy_field }}
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.number_of_blocks|as_crispy_field }}
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.number_of_floors|as_crispy_field }}
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.number_of_flats|as_crispy_field }}
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.low_price|as_crispy_field }}
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.max_price|as_crispy_field }}
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{ form.currency|as_crispy_field }}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h5>Features</h5>
+                    {{form.wifi|as_crispy_field}}
+                    {{form.parking|as_crispy_field}}
+                    {{form.swimming_pool|as_crispy_field}}
+                    {{form.balcony|as_crispy_field}}
+                    {{form.garden|as_crispy_field}}
+                    {{form.security|as_crispy_field}}
+                    {{form.fitness_center|as_crispy_field}}
+                    {{form.air_conditioning|as_crispy_field}}
+                    {{form.central_heating|as_crispy_field}}
+                    {{form.laundary_room|as_crispy_field}}
+                    {{form.pets|as_crispy_field}}
+                    {{form.spa_massage|as_crispy_field}}
+                    </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <h5>Publish</h5>
+            <hr style="color:black">
+                <input class="my_btn" type="submit" value="Submit"></div>
+                <div class="form-group">
+                    {{ form.status|as_crispy_field }}
+                  </div>
+                  <div class="form-group">
+                    <h5>Categories</h5>
+                    {{ form.apartment|as_crispy_field }}
+                    {{ form.villa|as_crispy_field }}
+                    {{ form.condo|as_crispy_field }}
+                    {{ form.house|as_crispy_field }}
+                    {{ form.land|as_crispy_field }}
+                    {{ form.commercial_property|as_crispy_field }}
+                  </div>
+                  <div class="form-group">
+                    {{ form.investors|as_crispy_field }}
+                  </div>
+                  <div class="form-group">
+                    {{ form.unique_id|as_crispy_field }}
+                  </div>
+                  <div class="form-group">
+                    {{ form.finish_date|as_crispy_field }}
+                  </div>
+                  <div class="form-group">
+                    {{ form.sell_date|as_crispy_field }}
+                  </div>
+        </div>
+    </div>
+</form>
+<div>
+
+</div>
+{%endblock main-content%}
+
+
+
